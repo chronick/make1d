@@ -6,20 +6,6 @@ import re
 
 from UserString import MutableString
 
-"""
-ChangeLog:
-
-1.1.0: checks config file for defects before processing it
-
-1.0.9.1: debug attribute in config files is now optional
-
-1.0.9: 	added RemoveNulls method to sterilize input from null characters
-		fixed issue with multiple-runs-per-file feature with extracting the zero time
-
-1.0.8: 	hack to handle runs that are all in the same file 
-
-"""
-
 
 def RemoveNulls(str):
 	outstr= MutableString()
