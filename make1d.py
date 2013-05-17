@@ -641,6 +641,11 @@ if one_run_per_file:
 							if convert_seconds == True:
 								rec_value /= 1000.0
 								#print "converting %s to seconds" %(rec_value)  
+						elif d_opts[oneD][2] in ('ResponseTime', 'RTTime', 'RT'):
+							rec_value = (float(rec_value))
+							if convert_seconds == True:
+								rec_value /= 1000.0
+								#print "converting %s to seconds" %(rec_value)  
 					except KeyError:
 						print d_opts[oneD][0],'not in trial',trial_count
 					except IndexError:
@@ -735,6 +740,11 @@ else:
 							#print "converting %s to seconds" %(rec_value)
 					elif d_opts[oneD][2] in ('OnsetTime','onsettime','onset','Onsettime','onsetTime','time'):
 						rec_value = (float(rec_value)-time_zero)
+						if convert_seconds == True:
+							rec_value /= 1000.0
+							#print "converting %s to seconds" %(rec_value)  
+					elif d_opts[oneD][2] in ('ResponseTime', 'RTTime', 'RT'):
+						rec_value = (float(rec_value))
 						if convert_seconds == True:
 							rec_value /= 1000.0
 							#print "converting %s to seconds" %(rec_value)  
